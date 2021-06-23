@@ -1,10 +1,15 @@
 body{
     width: 80%;
     margin: auto;
-    
+    background-image: url(spy1.jpg);
 }
 h1{
     text-align: center;
+    color: blue;
+    /* background-color: black; */
+    font-weight: bolder;
+    padding: 5px;
+    font-size: 60px;
 }
 .date{
     height: 50px;
@@ -29,20 +34,41 @@ h1{
 }
 #time{
     float: right;
+    font-size: 35px;
+    font-weight: bold;
+    color: rgb(97, 95, 13);
+    background-color: cyan;
+    
 }
 
 #date1{
     float: right;
+    font-size: 35px;
+    font-weight: bold;
+    color: rgb(97, 95, 13);
+    background-color: cyan;
 }
 #month1{
     float: left;
+    text-align: center;
+    font-size: 40px;
+    margin-right: 10px;
+    font-family: sans-serif;
 }
 #year1{
     float: left;
+    text-align: center;
+    font-size: 40px;
+    font-family: sans-serif;
 }
 .matter{
     color: blue;
 }
 .delete{
     background-color: red;
+}
+.search{
+    font-size: 30px;
+    font-family:monospace;
+    font-weight: bold;
 }

@@ -12,36 +12,23 @@
         <h1>CALENDAR</h1>
 
         <div id="date1"></div>
-        <br><br>
+       <br><br><br>
         <div id="time"></div>
         <br>
         <br>
 
-        
-        <label for="month" class="month">month :</label>
+        <div class="search">
+        <label for="month" class="month">Month :</label>
         <input type="text" placeholder="enter month" id="month">
          
-        <!-- <label for="month" class="month">month :</label>
-        <select name="" id="month">
-            <option id="january" value="">january</option>
-            <option id="february" value="">february</option>
-            <option id="march" value="">march</option>
-            <option id="april" value="">april</option>
-            <option id="may" value="">may</option>
-            <option id="june" value="">june</option>
-            <option id="july" value="">july</option>
-            <option id="august" value="">august</option>
-            <option id="september" value="">september</option>
-            <option id="october" value="">october</option>
-            <option id="november" value="">november</option>
-            <option id="december" value="">december</option>
-        </select> -->
-        <label for="year" class="year">year :</label>
+        <label for="year" class="year">Year :</label>
         <input type="text"  placeholder="enter year" id="year"> <button id="click">click on</button>
+    </div>
 
         <div style="margin-bottom: 50px;"></div>
-        <div id="month1"></div><div id="year1"></div>
-        <div style="margin-bottom: 100px;"></div>
+        <div class="month" id="month1"></div>
+        <div class="month" id="year1"></div>
+        <div style="margin-bottom: 150px;"></div>
 
         <div class="calender">
             <div class="row" id="one">
@@ -99,7 +86,11 @@
         
         </div>
 
-        <div id="exsistingtasks"></div>
+        <div id="month2"></div>
+
+        <ul id="exsistingtasks"></ul>
+
+       <!-- <button id="completed">save the tasks</button>  -->
 
         <div id="task-bar">
         <input id="task-text" type="text" placeholder="enter your task"><button id="task">add task</button>
