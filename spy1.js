@@ -42,11 +42,7 @@ document.querySelector('.date h2').innerHTML = months[date.getMonth()]
 document.querySelector('.date p').innerHTML = new Date().toDateString()
 
 
-const lastday = new Date(year,date.getMonth()+1,0).getDate()
-
-
-console.log(lastday)
-
+const lastday = new Date(date.getFullYear(),date.getMonth()+1,0).getDate()
 
 
 date.setDate(1)
@@ -61,7 +57,12 @@ for(let j=0;j<firstdayvalue;j++){
 }
 
 for(let i=1;i<=lastday;i++){
-    dayss += `<div class = "daynm" id = "${i}" >${i}</div>`
+    if(i === new Date().getDate() && date.getMonth() === new Date().getMonth() && date.getFullYear() === new Date().getFullYear() ){
+    dayss += `<div class = "today" id = "${i}" >${i}</div>`
+    }
+    else{
+        dayss += `<div class = "daynm" id = "${i}" >${i}</div>`
+    }
     document.querySelector('.days').innerHTML=dayss
 }
 }
@@ -103,9 +104,14 @@ function addingTasks(event){
 
         var taskelement =document.createElement('li');
         taskelement.className = 'matter'
-        var taskelementtext = document.createTextNode(text);
+        if(text === ""){
+            alert("please enter the text")
+        }
+        else{
+            var taskelementtext = document.createTextNode(text);
         taskelement.appendChild(taskelementtext);
         document.getElementById('addtask').appendChild(taskelement);
+        }
 
     
         var deletetask =document.createElement('button')
@@ -121,10 +127,21 @@ function addingTasks(event){
         })
         localStorage.setItem(datestr,JSON.stringify(tasks))
     }
-    
+    var completetask =document.createElement('button')
+        completetask.className = 'complete'
+        completetask.appendChild(document.createTextNode('save'));
+        document.getElementById('completed').appendChild(completetask)
+
+        completetask.addEventListener('click',(event)=>{
+            alert("tasks are succesfully saved")
+            location.reload(true)
+        })
+
         var stored = JSON.parse(localStorage.getItem(datestr))
+        if(stored !== null){
         for(i=0;i<stored.length;i++){
             var li =document.createElement('li')
+            li.className ='matter'
                li.appendChild(document.createTextNode(stored[i]))
                document.getElementById('oldtask').appendChild(li)
 
@@ -138,8 +155,8 @@ function addingTasks(event){
                 document.getElementById('oldtask').removeChild(li)
                 stored.pop(stored[i]);
                 localStorage.setItem(datestr,JSON.stringify(stored))
-                console.log(stored)
         })
         localStorage.setItem(datestr,JSON.stringify(stored))
             }
+        }
 }

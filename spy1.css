@@ -6,7 +6,7 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 50px;
+    font-size: 60px;
     font-family: Libre Baskerville;
     letter-spacing: 5px;
     color: rgb(227, 250, 16);
@@ -40,7 +40,7 @@ h1{
 #calender{
     width: 40rem;
     height: 33rem;
-    background-color: rgb(35, 121, 121);
+    background-color: rgb(11, 19, 19);
     border: 3px white solid;
 }
 .month{
@@ -88,15 +88,56 @@ h1{
     justify-content: center;
     align-items: center;
 }
-.days div:hover{
-    border: rgb(66, 65, 131) 2px solid;
+.daynm:hover:not(.today){
+    border: rgb(8, 7, 75) 2px solid;
     box-sizing: border-box;
 }
+.today{
+    background-color:rgb(209, 50, 22);
+}
 .delete{
-    color: rgb(255, 9, 9);
-    margin-left: 40px;
+    float: right;
+    margin-right: 35rem;
+    background-color: rgb(247, 0, 0);
+    font-size:20px ;
+}
+.delete:hover{
+    background-color: rgb(247, 231, 0);
 }
 .task{
     margin-left: 20px;
+    font-size: 35px;
+}
+.task label{
+    font-size: 40px;
+}
+
+.matter{
+    list-style: none;
+    list-style-image: url(spider.jpg);
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+.tasks{
+    font-size: 40px;
+    color: rgb(10, 219, 247);
+    font-family:Arial, Helvetica, sans-serif
+}
+#click{
+    font-size: 30px;
+    background-color: rgb(184, 123, 12);
+}
+#click:hover{
+    background-color: yellowgreen;
+}
+.complete{
+    margin-top: 25px;
+    margin-left: 40px;
+    font-weight: bold;
+    font-size: 35px;
+    background-color: coral;
+}
+.complete:hover{
+    background-color: blue;
 }
 
