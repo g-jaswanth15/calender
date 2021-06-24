@@ -89,7 +89,7 @@ h1{
     align-items: center;
 }
 .daynm:hover:not(.today){
-    border: rgb(8, 7, 75) 2px solid;
+    border: rgb(41, 37, 255) 2px solid;
     box-sizing: border-box;
 }
 .today{
@@ -140,4 +140,7 @@ h1{
 .complete:hover{
     background-color: blue;
 }
-
+p{
+    font-size: 20px;
+    margin-left: 30px;
+}

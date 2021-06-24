@@ -1,4 +1,4 @@
-
+document.getElementById('container1').style.display = "none"
 function update(){
 
     var date = new Date()
@@ -83,6 +83,7 @@ calender()
 document.querySelectorAll('.daynm').forEach(item => {item.addEventListener("click",addingTasks)})
 
 function addingTasks(event){
+    document.getElementById('container1').style.display = "block"
     var ml = event.target.id
     date.setDate(ml)
     var datestr = document.querySelector('.date p').innerHTML = date.toDateString()
