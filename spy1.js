@@ -117,6 +117,7 @@ function addingTasks(event){
             var li = event.target.parentElement
             document.getElementById('addtask').removeChild(li)
             tasks.pop(text);
+            localStorage.setItem(datestr,JSON.stringify(tasks))
         })
         localStorage.setItem(datestr,JSON.stringify(tasks))
     }
@@ -135,9 +136,10 @@ function addingTasks(event){
                 deletetask.addEventListener('click',(event)=>{
                 var li = event.target.parentElement
                 document.getElementById('oldtask').removeChild(li)
-                tasks.pop(stored[i]);
+                stored.pop(stored[i]);
                 localStorage.setItem(datestr,JSON.stringify(stored))
-                console.log('hi')
+                console.log(stored)
         })
+        localStorage.setItem(datestr,JSON.stringify(stored))
             }
 }

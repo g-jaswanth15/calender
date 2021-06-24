@@ -84,6 +84,9 @@ h1{
 .days div{
     width:calc(40rem/7);
     height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .days div:hover{
     border: rgb(66, 65, 131) 2px solid;
