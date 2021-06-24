@@ -1,0 +1,99 @@
+body{
+    background-color: rgb(26, 8, 43);
+    color: white;
+}
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    font-family: Libre Baskerville;
+    letter-spacing: 5px;
+    color: rgb(227, 250, 16);
+}
+.clocktime{
+    padding: 20px;
+    float: right;
+    margin-right: 20px;
+    border: rgb(96, 245, 9) 4px solid;
+    box-sizing: border-box;
+    font-weight: bold;
+    font-family: Staatliches;
+    letter-spacing: 2px;
+}
+#clock{
+    font-size: 15px;
+    
+}
+#time{
+    text-align: center;
+    padding-top: 5px;
+    font-size: 30px;
+}
+
+#container{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    
+}
+#calender{
+    width: 40rem;
+    height: 33rem;
+    background-color: rgb(35, 121, 121);
+    border: 3px white solid;
+}
+.month{
+    background-color: rgb(209, 50, 22);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+.arrow1{
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 4px;
+}
+.arrow2{
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 4px;
+}
+.weekdays{
+    display: flex;
+    text-transform: uppercase;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 5rem;
+}
+.weekdays div{
+    font-weight: bold;
+    width: calc(40rem/7) ;
+}
+.days{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+}
+.days div{
+    width:calc(40rem/7);
+    height: 4rem;
+}
+.days div:hover{
+    border: rgb(66, 65, 131) 2px solid;
+    box-sizing: border-box;
+}
+.delete{
+    color: rgb(255, 9, 9);
+    margin-left: 40px;
+}
+.task{
+    margin-left: 20px;
+}
+
